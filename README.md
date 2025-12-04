@@ -6,6 +6,7 @@
 
 ### 環境
 <img src="https://img.shields.io/badge/-XAMPP-FB7A24.svg?logo=xampp&style=flat">
+
 - XAMPPを<a href="https://www.apachefriends.org/jp/index.html">こちら</a>からダウンロード・インストールすること.
 - ディレクトリ"xampp"直下の"htdocs"を本プロジェクトの"htdocs"に置き換えること.
 
