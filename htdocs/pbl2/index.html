@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jomo database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1><a href="http://localhost/pbl2/index.html">Jomo Database</a></h1>
+    <div class="container">
+        <form method="POST" name="form1" class="search-form">
+            <!-- キーワード入力窓と検索ボタン -->
+            <div class="roulette-word">
+                <input type="text" id="searchInput" placeholder="キーワードを入力">
+                <button type="button" id="searchBtn">検索</button>
+            </div>    
+            <!-- AND、OR検索の条件 -->
+            <div class="roulette-radio">
+                <label><input type="radio" name="keywordLogic" value="AND" checked>AND検索</label>
+                <label><input type="radio" name="keywordLogic" value="OR">OR検索</label>
+            </div>
+            </br>
+            <!-- 期間 -->
+            <div class="roulette-number">
+                <span class="date-label">FROM：</span>
+                    <select name="ageStartYear" id="ageStartYear"></select>
+                    年
+                    <select name="ageStartMonth" id="ageStartMonth"></select>
+                    月
+                    <select name="ageStartDay" id="ageStartDay"></select>
+                    日<br>
+                </label>
+
+                <span class="date-label">TO：</span>
+                    <select name="ageEndYear" id="ageEndYear"></select>
+                    年
+                    <select name="ageEndMonth" id="ageEndMonth"></select>
+                    月
+                    <select name="ageEndDay" id="ageEndDay"></select>
+                    日
+                </label>
+            </div>
+            </br>
+
+            <!-- 地域 -->
+            <div class="roulette-checkbox">
+                <label><input type="checkbox" id="region_1" name="regions[]" value="1">東毛</label>                
+                <label><input type="checkbox" id="region_2" name="regions[]" value="2">西北毛</label>
+                <label><input type="checkbox" id="region_3" name="regions[]" value="3">県央</label>
+            </div>
+
+            </br>
+            <!-- 表示する記事の数 -->
+            <div class="roulette-dropdown">表示する記事の数：
+                <select id="number">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                    <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+            </br>
+            <!-- ソート順 -->
+            <div class="roulette-dropdown">ソート順：
+                <select id="sortOrder">
+                    <option value="desc" selected>降順</option>
+                    <option value="asc">昇順</option>
+                </select>
+            </div>
+            </br>
+            <!-- カテゴリ選択 -->
+            <div class="roulette-checkbox">カテゴリを選択
+                <!-- カテゴリの選択肢 -->
+                <div class="category-column">
+                    <label><input name="tag[]" type="checkbox" value="1">社会</label>
+                    <label><input name="tag[]" type="checkbox" value="2">経済</label>
+                </div>
+                <div class="category-column">
+                    <label><input name="tag[]" type="checkbox" value="3">政治</label>
+                    <label><input name="tag[]" type="checkbox" value="4">国際</label>
+                </div>
+                <div class="category-column">
+                    <label><input name="tag[]" type="checkbox" value="5">文化・スポーツ</label>
+                    <label><input name="tag[]" type="checkbox" value="6">科学</label>
+                </div>
+                
+                <div class="category-column">
+                    <label><input name="tag[]" type="checkbox" value="7">生活・子育て</label>
+                    <label><input name="tag[]" type="checkbox" value="8">その他</label>
+                </div>       
+                <!-- カテゴリ選択の論理演算子の選択ボタン -->
+                <div class="roulette-radio-category">
+                    <label><input type="radio" name="bond" value="OR" checked>いずれかを含む</label>
+                    <label><input type="radio" name="bond" value="AND">全て含む</label>
+                </div>
+            </div>
+        </form>
+
+        <div id="searchResults" class="search-results">
+        <!-- ここに検索結果が表示されます -->
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/dateOption.js"></script>
+    <script src="js/kuromoji.js"></script>
+    <script>
+        generateYearOptions(document.getElementById("ageStartYear"));
+        generateYearOptions(document.getElementById("ageEndYear"));
+    </script>
+</body>
+</html>

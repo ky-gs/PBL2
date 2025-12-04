@@ -1,0 +1,156 @@
+/* 全体のスタイル設定 */
+body {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+h1, h2 {
+    color: #404040;
+    margin-left: 10px;
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+}
+
+/* 検索フォームのスタイル設定 */
+.search-form {
+    flex: 25;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 20%;
+    box-sizing: border-box;
+    border: 2px solid #40A2D8;
+}
+
+#searchInput,
+#searchButton {
+    width: 80%; /* または適切な幅に調整 */
+    box-sizing: border-box; /* ボックスモデルの影響を受けないようにする */
+    display: inline-block; /* インラインブロック要素として横並びにする */
+}
+
+.roulette-number {
+    width: 100%;
+    text-align: left;
+}
+
+.date-label {
+    display: inline-block;
+    text-align: right;
+    width: 60px; /* 調整する必要がある幅に合わせて調整してください */
+}
+
+/* カテゴリ選択のスタイル設定 */
+.roulette-checkbox {
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.roulette-checkbox label {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.category-column {
+    display: flex;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.category-column label {
+    margin-bottom: 2px;
+    vertical-align: center;
+    margin-left: 5px;
+}
+
+/* 論理演算子の選択ボタンのスタイル設定 */
+.roulette-radio-category {
+    margin-top: 10px;
+}
+
+.roulette-radio-category label {
+    display: inline-block; /* インラインブロック要素に変更 */
+    margin-right: 10px; /* マージンを追加してボタン間の隙間を設定 */
+}
+
+/* 検索結果のスタイル設定 */
+.search-results {
+    flex: 75;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    box-sizing: border-box;
+    border: 2px solid #40A2D8;
+    margin-right: 10px;
+}
+
+.search-result {
+    display: flex;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.left-section {
+    flex: 3; /* 左セクションの幅が右セクションの2倍 */
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section {
+    flex: 1; /* 右セクションの幅 */
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .result-date {
+        text-align: center;
+        flex: 1; /* span要素が右セクション内で占める割合 */
+        margin-bottom: 10px;
+    }
+
+    /* img要素のスタイル */
+    .result-image {
+        flex: 3; /* img要素が右セクション内で占める割合 */
+    }
+}
+
+.search-result a {
+    color: #40A2D8;
+    text-decoration: none;
+    text-align: left;
+    font-weight: bold;
+}
+
+.search-result p {
+    font-size: 0.7em;
+    color: #808080;
+    font-weight: normal;
+    margin-left: 30px;
+}
+
+.search-result img {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+}
