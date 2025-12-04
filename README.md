@@ -18,7 +18,7 @@
 <img src="https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=flat">
 
 ### 使用方法１
-1. `JomoApp`を起動.
+1. `JomoApp`を起動.（ショートカット未作成なら"start_xampp_app.bat"の実行）
 2. `データベース起動`をクリック.
 3. 画面左の検索フォーム上で検索キーワードの入力やジャンルのフィルタリングを行う.
 
